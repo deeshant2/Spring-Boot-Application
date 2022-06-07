@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrakis Airlines: Planes</title>
+</head>
+<body>
+<h1>Welcome to the Arrakis Airlines Planes page</h1>
+
+<table>
+  <tr>
+    <th>Plane ID</th>
+    <th>Model</th>
+  </tr>
+  <tr th:each="plane: ${planes}">
+    <td th:text="${plane.planeId}">Plane ID</td>
+      <td th:text="${plane.model}">Model</td>
+  </tr>
+</table>
+</body>
+</html>

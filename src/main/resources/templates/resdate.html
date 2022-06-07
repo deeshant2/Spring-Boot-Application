@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrakis Airlines: Reservations</title>
+</head>
+<body>
+<h1>Welcome to the Arrakis Airlines Reservations page</h1>
+
+<table>
+  <tr>
+    <th>Reservation ID</th>
+    <th>Passenger ID</th>
+    <th>Plane ID</th>
+    <th>Date</th>
+  </tr>
+  <tr th:each="res:${reservations}">
+      <td th:text="${res.reservationId}">Reservation ID</td>
+      <td th:text="${res.passengerId}">Passenger ID</td>
+      <td th:text="${res.planeId}">Plane ID</td>
+      <td th:text="${res.date}">Date</td>
+  </tr>
+</table>
+</body>
+</html>
